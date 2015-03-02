@@ -16,57 +16,114 @@ html, body {
 
 body {
 	background-color: @black;
-	color: @lightblue;
+	color: darken(@lightblue, 10%);
+
+	@media (min-width: 768px ) {
+		.border-left {
+			height: 100%;
+			border-left: 1px solid #111;
+		}
+	}
 
 	h1 {
 		margin: 0px;
 		padding: 20px 0px;
+		font-size: 36px;
+		color: lighten(@lightblue, 0%);
 	}
 
-	.clearfix {
-		clear: both;
+	p {
+		letter-spacing: 1px;
+
+		&.lead {
+			letter-spacing: 1px;
+			font-size: 140%;
+		}
+	}
+
+	a {
+		text-decoration: none;
+		color: darken(@lightblue, 10%);
+
+		&:visited,
+		&:active {
+			color: darken(@lightblue, 10%);
+		}
+
+
+		&:hover {
+			color: lighten(@lightblue, 10%);
+		}
+
+		&.btn {
+			text-decoration: none;
+			display: inline-block;
+			padding: 12px 40px;
+			background-color: @lightblue;
+			color: #FFF;
+			margin-bottom: 15px;
+
+			&:not(:last-child) {
+				margin-right: 10px;
+			}
+
+			i {
+				color: #FFF;
+			}
+		}
+
+		i {
+			color: @lightblue;
+		}
+	}
+
+	span.nowrap {
+		white-space: nowrap;
 	}
 
 	@media (min-width: 960px) {
-		.aboutme {
-			width: 60%;
-			margin-left: 40%;
+		div.right {
+			width: 30%;
 		}
 
-		.contactme {
-			float: right;
-			width: 60%;
-		}
-
-		.rouvenherzog {
-			float: left;
-			width: 40%;
+		div.left {
+			width: 70%;
 		}
 	}
 
 	@media (min-width: 768px) and (max-width: 960px) {
-		.aboutme {
-			width: 50%;
-			margin-left: 50%;
+		div.right {
+			width: 30%;
 		}
 
-		.contactme {
-			float: right;
-			width: 50%;
-		}
-
-		.rouvenherzog {
-			float: left;
-			width: 50%;
+		div.left {
+			width: 70%;
 		}
 	}
 
-	@media (min-width: 768px) and (min-height: 600px) {
-		.aboutme,
-		.contactme,
-		.rouvenherzog {
+	@media (min-width: 768px) {
+		div.right {
+			float: right;
+			height: 100%;
+		}
+
+		div.left {
+			float: left;
+			height: 100%;
+		}
+	}
+
+	@media (min-width: 768px) and (min-height: 700px) {
+		.wrapper {
 			position: relative;
-			min-height: 50%;
+
+			&.top {
+				height: 80%;
+			}
+
+			&.bot {
+				height: 20%;
+			}
 
 			.content {
 				position: absolute;
@@ -79,15 +136,27 @@ body {
 		}
 	}
 
-	@media (min-width: 768px) and (max-height: 600px) {
-		.contactme {
+	@media (min-width: 768px) and (max-height: 700px) {
+		.bot {
 			.content {
-				padding-top: 50px;
+				padding-top: 30px;
+				padding-bottom: 50px;
 			}
+		}
+
+		.border-left {
+			height: auto;
+			min-height: 100%;
 		}
 	}
 
 	@media (max-width: 768px) {
+		.right {
+			margin-top: 50px;
+			padding-top: 50px;
+			border-top: 1px solid #111;
+		}
+
 		.contactme,
 		.rouvenherzog {
 			padding: 50px 0px;
@@ -103,17 +172,27 @@ body {
 			overflow: hidden;
 
 			img {
-				width: 200px;
+				width: 100%;
+			}
+
+			@media (min-width: 860px) {
+				width: 220px;
+				height: 220px;
+			}
+
+			@media (min-width: 1160px) {
+				width: 270px;
+				height: 270px;
 			}
 		}
 
-		.lead {
-			letter-spacing: 1px;
-			font-size: 140%;
+		.description {
+			width: 90%;
+			margin: 0px auto;
 		}
 	}
 
-	.rouvenherzog {
+	.rouvenherzog-info {
 		.gallery {
 			width: 100%;
 
@@ -128,11 +207,19 @@ body {
 				}
 			}
 		}
+
+		.description {
+			width: 80%;
+			margin: 40px auto 0px;
+		}
 	}
 
 	.contactme {
-		i {
-			margin-right: 5px;
+		.content {
+			div {
+				font-size: 100%;
+				margin-bottom: 5px;
+			}
 		}
 	}
 }

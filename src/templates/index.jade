@@ -5,37 +5,72 @@ html(lang="en")
 		link(rel="stylesheet", href="bower_components/font-awesome/css/font-awesome.css")
 		link(rel="stylesheet", href="rouvenherzog.css")
 	body
-		div.aboutme
-			div.content
-				h1 about me
-				div.img-wrapper
-					img(src="images/me.jpg")
-				p.lead My name is Rouven Herzog
+		div.left
+			div.wrapper.top.rouvenherzog-info
+				div.content
+					h1 rouvenherzog
+					p.lead A Simple, Pluggable NodeJs Blogging and Gallery CMS
+					div.gallery
+						img(src="images/media-screenshot.jpg")
+						img(src="images/dashboard-screenshot.jpg")
+						img(src="images/blog-screenshot.jpg")
+					div.description
+						p.
+							Just plug it into your existing Express.js app
+							and you'll instantly have a backend available to
+							create, update and delete Blog Entries and Images.
+						p.
+							Just embed those into your website and you are done.
 
-		div.contactme
-			div.content
-				div
-					i.fa.fa-github
-					| @rouvenherzog
-				div
-					i.fa.fa-linkedin-square
-					| de.linkedin.com/in/rouvenherzog
-				div
-						i.fa.fa-envelope
-						| contact@rouvenherzog.me
+			div.wrapper.bot.rouvenherzog-showme
+				div.content
+					div
+						a(href="http://demo.rouvenherzog.me").btn
+							i.fa.fa-chevron-right &nbsp;
+							| Try it out
+						a.btn
+							i.fa.fa-search &nbsp;
+							| Get started
+					div
+						a(href="https://github.com/rouvenherzog/rouvenherzog")
+							i.fa.fa-github &nbsp;
+							| View on Github
 
-		div.rouvenherzog
-			div.content
-				h1 rouvenherzog
-				p.lead A Simple, Small NodeJs Blogging and Gallery CMS
-				div.gallery
-					img(src="images/media-screenshot.jpg")
-					img(src="images/dashboard-screenshot.jpg")
-					img(src="images/blog-screenshot.jpg")
-				div
-					i.fa.fa-github 
-					| View on Github 
-					i.fa.fa-chevron-right
-					| Try it out
+		div.right
+			div.border-left
+				div.wrapper.top.aboutme
+					div.content
+						h1 about me
+						div.img-wrapper
+							img(src="images/me.jpg")
 
-		div.clearfix
+						div.description
+							p.lead
+								| My name is 
+								span.nowrap Rouven Herzog.
+							p.
+								I'm a Web Developer living in Berlin,
+								currently finishing my studies in
+								international media and computing with a
+								bachelor thesis about retrospectives
+								in distributed, agile teams.
+							p.
+								I'm always trying new approaches to
+								solving problems in front- and backend.
+								Mainly did I use python, NodeJs and Ruby
+								on Rails so far.
+
+				div.wrapper.bot.contactme
+					div.content
+						div
+							a(href="https://github.com/rouvenherzog")
+								i.fa.fa-github &nbsp;
+								| @rouvenherzog
+						div
+							a(href="http://de.linkedin.com/in/rouvenherzog")
+								i.fa.fa-linkedin-square &nbsp;
+								| linkedin
+						div
+							a(href="mailto:contact@rouvenherzog.me")
+								i.fa.fa-envelope &nbsp;
+								| contact@rouvenherzog.me
