@@ -1,0 +1,67 @@
+@import 'colors';
+
+html, body {
+	margin: 0px;
+	padding: 0px;
+	text-align: center;
+	font-family: sans-serif;
+}
+
+body {
+	background-color: darken(@blue, 40%);
+
+	h1 {
+		margin: 0px;
+		padding: 20px 0px;
+		font-size: 36px;
+		color: lighten(@lightblue, 0%);
+	}
+
+	p {
+		letter-spacing: 1px;
+
+		&.lead {
+			letter-spacing: 1px;
+			font-size: 140%;
+		}
+	}
+
+	a {
+		text-decoration: none;
+		color: lighten(@blue, 10%);
+
+		&:visited,
+		&:active {
+			color: lighten(@blue, 10%);
+		}
+
+		&:hover {
+			color: lighten(@blue, 20%);
+		}
+
+		&.btn {
+			text-decoration: none;
+			display: inline-block;
+			padding: 12px 40px;
+			background-color: @lightblue;
+			color: lighten(@blue, 40%);
+			margin-bottom: 15px;
+
+			&:not(:last-child) {
+				margin-right: 10px;
+			}
+
+			i {
+				color: lighten(@blue, 40%);
+			}
+		}
+
+		i {
+			color: lighten(@blue, 20%);
+		}
+	}
+
+	span.nowrap {
+		white-space: nowrap;
+	}
+}

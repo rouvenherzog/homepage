@@ -1,0 +1,88 @@
+@import 'colors';
+
+body {
+	.right {
+		color: lighten(@blue, 10%);
+
+		.aboutme {
+			div.img-wrapper {
+				margin: 0px auto 20px;
+				width: 200px;
+				height: 200px;
+				border-radius: 50%;
+				overflow: hidden;
+
+				img {
+					width: 100%;
+				}
+
+				@media (min-width: 860px) {
+					width: 220px;
+					height: 220px;
+				}
+
+				@media (min-width: 1160px) {
+					width: 270px;
+					height: 270px;
+				}
+			}
+
+			.description {
+				width: 90%;
+				margin: 0px auto;
+			}
+		}
+
+		.contactme {
+			.content {
+				div {
+					font-size: 100%;
+					margin-bottom: 5px;
+				}
+			}
+		}
+	}
+
+	.left {
+		color: lighten(@blue, 20%);
+
+		h1 {
+			font-size: 48px;
+			padding-bottom: 10px;
+			color: lighten(@lightblue, 30%);
+		}
+
+		.rouvenherzog-info {
+			.gallery {
+				width: 100%;
+
+				img {
+					width: 40%;
+
+					&:nth-child(2) {
+						position: relative;
+						margin: 0px -18% -5px;
+						width: 50%;
+						box-shadow: 0px 0px 5px darken(@blue, 40%);
+					}
+				}
+
+				@media (min-width: 960px) {
+					img {
+						width: 30%;
+
+						&:nth-child(2) {
+							margin: 0px -15% -5px;
+							width: 40%;
+						}
+					}
+				}
+			}
+
+			.description {
+				width: 80%;
+				margin: 40px auto 0px;
+			}
+		}
+	}
+}

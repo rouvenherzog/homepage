@@ -15,92 +15,12 @@ html, body {
 }
 
 body {
-	background-color: @black;
-
 	@media (min-width: 768px ) {
 		.border-left {
 			height: 100%;
-			border-left: 1px solid #111;
-		}
-	}
-
-	h1 {
-		margin: 0px;
-		padding: 20px 0px;
-		font-size: 36px;
-		color: lighten(@lightblue, 0%);
-	}
-
-	p {
-		letter-spacing: 1px;
-
-		&.lead {
-			letter-spacing: 1px;
-			font-size: 140%;
-		}
-	}
-
-	a {
-		text-decoration: none;
-		color: darken(@lightblue, 10%);
-
-		&:visited,
-		&:active {
-			color: darken(@lightblue, 10%);
+			border-left: 1px solid darken(@blue, 43%);
 		}
 
-
-		&:hover {
-			color: lighten(@lightblue, 10%);
-		}
-
-		&.btn {
-			text-decoration: none;
-			display: inline-block;
-			padding: 12px 40px;
-			background-color: @lightblue;
-			color: #FFF;
-			margin-bottom: 15px;
-
-			&:not(:last-child) {
-				margin-right: 10px;
-			}
-
-			i {
-				color: #FFF;
-			}
-		}
-
-		i {
-			color: @lightblue;
-		}
-	}
-
-	span.nowrap {
-		white-space: nowrap;
-	}
-
-	@media (min-width: 960px) {
-		div.right {
-			width: 30%;
-		}
-
-		div.left {
-			width: 70%;
-		}
-	}
-
-	@media (min-width: 768px) and (max-width: 960px) {
-		div.right {
-			width: 30%;
-		}
-
-		div.left {
-			width: 70%;
-		}
-	}
-
-	@media (min-width: 768px) {
 		div.right {
 			float: right;
 			height: 100%;
@@ -109,6 +29,26 @@ body {
 		div.left {
 			float: left;
 			height: 100%;
+		}
+	}
+
+	@media (min-width: 768px) and (max-width: 960px) {
+		div.right {
+			width: 25%;
+		}
+
+		div.left {
+			width: 75%;
+		}
+	}
+
+	@media (min-width: 960px) {
+		div.right {
+			width: 25%;
+		}
+
+		div.left {
+			width: 75%;
 		}
 	}
 
@@ -153,86 +93,12 @@ body {
 		.right {
 			margin-top: 50px;
 			padding-top: 50px;
-			border-top: 1px solid #111;
+			border-top: 1px solid darken(@blue, 43%);
 		}
 
 		.contactme,
 		.rouvenherzog {
 			padding: 50px 0px;
-		}
-	}
-
-	.right {
-		color: darken(@lightblue, 10%);
-	}
-
-	.left {
-		color: lighten(@lightblue, 40%);
-
-		h1 {
-			font-size: 48px;
-			padding-bottom: 10px;
-			color: lighten(@lightblue, 30%);
-		}
-	}
-
-	.aboutme {
-		div.img-wrapper {
-			margin: 0px auto 20px;
-			width: 200px;
-			height: 200px;
-			border-radius: 50%;
-			overflow: hidden;
-
-			img {
-				width: 100%;
-			}
-
-			@media (min-width: 860px) {
-				width: 220px;
-				height: 220px;
-			}
-
-			@media (min-width: 1160px) {
-				width: 270px;
-				height: 270px;
-			}
-		}
-
-		.description {
-			width: 90%;
-			margin: 0px auto;
-		}
-	}
-
-	.rouvenherzog-info {
-		.gallery {
-			width: 100%;
-
-			img {
-				width: 40%;
-
-				&:nth-child(2) {
-					position: relative;
-					margin: 0px -18% -5px;
-					width: 50%;
-					box-shadow: 0px 0px 5px #000;
-				}
-			}
-		}
-
-		.description {
-			width: 80%;
-			margin: 40px auto 0px;
-		}
-	}
-
-	.contactme {
-		.content {
-			div {
-				font-size: 100%;
-				margin-bottom: 5px;
-			}
 		}
 	}
 }
