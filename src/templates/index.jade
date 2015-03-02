@@ -28,7 +28,7 @@ html(lang="en")
 						a(href="http://demo.rouvenherzog.me").btn
 							i.fa.fa-chevron-right &nbsp;
 							| Try it out
-						a.btn
+						a(href="https://github.com/rouvenherzog/rouvenherzog").btn
 							i.fa.fa-search &nbsp;
 							| Get started
 					div
@@ -74,3 +74,19 @@ html(lang="en")
 							a(href="mailto:contact@rouvenherzog.me")
 								i.fa.fa-envelope &nbsp;
 								| contact@rouvenherzog.me
+
+	script(type="text/javascript").
+		var _paq = _paq || [];
+		_paq.push(['trackPageView']);
+		_paq.push(['enableLinkTracking']);
+		(function() {
+		var u="//piwik.rouvenherzog.me/";
+		_paq.push(['setTrackerUrl', u+'piwik.php']);
+		_paq.push(['setSiteId', 2]);
+		var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+		g.type='text/javascript'; g.async=true; g.defer=true; g.src=u+'piwik.js'; s.parentNode.insertBefore(g,s);
+		})();
+
+	noscript
+		p
+			img(src="//piwik.rouvenherzog.me/piwik.php?idsite=2", style="border:0;", alt="")

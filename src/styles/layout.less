@@ -16,7 +16,6 @@ html, body {
 
 body {
 	background-color: @black;
-	color: darken(@lightblue, 10%);
 
 	@media (min-width: 768px ) {
 		.border-left {
@@ -163,6 +162,18 @@ body {
 		}
 	}
 
+	.right {
+		color: darken(@lightblue, 10%);
+	}
+
+	.left {
+		color: lighten(@lightblue, 40%);
+
+		h1 {
+			color: lighten(@lightblue, 30%);
+		}
+	}
+
 	.aboutme {
 		div.img-wrapper {
 			margin: 0px auto 20px;
@@ -201,7 +212,7 @@ body {
 
 				&:nth-child(2) {
 					position: relative;
-					margin: 0px -18%;
+					margin: 0px -18% -5px;
 					width: 50%;
 					box-shadow: 0px 0px 5px #000;
 				}
