@@ -8,13 +8,15 @@ html, body {
 }
 
 body {
-	background-color: darken(@blue, 40%);
+	background-color: @darkblue40;
+	font-weight: 300;
+	line-height: 1.2;
 
 	h1 {
 		margin: 0px;
 		padding: 20px 0px;
 		font-size: 36px;
-		color: lighten(@lightblue, 0%);
+		color: @blue;
 	}
 
 	p {
@@ -28,23 +30,23 @@ body {
 
 	a {
 		text-decoration: none;
-		color: lighten(@blue, 10%);
+		color: @lightblue10;
 
 		&:visited,
 		&:active {
-			color: lighten(@blue, 10%);
+			color: @lightblue10;
 		}
 
 		&:hover {
-			color: lighten(@blue, 20%);
+			color: @lightblue20;
 		}
 
 		&.btn {
 			text-decoration: none;
 			display: inline-block;
 			padding: 12px 40px;
-			background-color: @lightblue;
-			color: lighten(@blue, 40%);
+			background-color: @darkblue20;
+			color: @lightblue40;
 			margin-bottom: 15px;
 
 			&:not(:last-child) {
@@ -52,12 +54,12 @@ body {
 			}
 
 			i {
-				color: lighten(@blue, 40%);
+				color: @lightblue40;
 			}
 		}
 
 		i {
-			color: lighten(@blue, 20%);
+			color: @lightblue20;
 		}
 	}
 
